@@ -5,9 +5,11 @@ import { ArrowDown, Github, Linkedin, Mail, Download, Link } from "lucide-react"
 import { TypingAnimation } from "@/components/typing-animation"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export function HeroSection() {
   const { profile } = portfolioData
+  const router = useRouter()
 
   const handleScrollToProjects = () => {
     const section = document.querySelector("#projects")
@@ -69,11 +71,7 @@ export function HeroSection() {
                 </Button>
                 <Button
                   variant="outline"
-                  onClick={() => {
-                    const resumeUrl =
-                      process.env.NEXT_PUBLIC_RESUME_LINK || "/resume.pdf"
-                    window.open(resumeUrl, "_blank", "noopener,noreferrer")
-                  }}
+                  onClick={() => router.push("/resume")}
                   className="group w-full sm:w-auto"
                 >
                   View Resume
