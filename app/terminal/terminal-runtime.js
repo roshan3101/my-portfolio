@@ -6,7 +6,7 @@ import {
   reportEntries,
   skillsContent,
 } from "@/content/home-sections/home";
-import { heroContent } from "@/content/hero";
+import { educationContent, heroContent } from "@/content/hero";
 
 const monthIndex = {
   Jan: 0,
@@ -831,50 +831,23 @@ class TerminalResume {
     outputElement.appendChild(experienceDiv);
     this.scrollToBottom(outputElement.closest(".terminal-content"));
   }
+
   showEducation(outputElement = this.output) {
-    const education = `<span style="color: #ff8c00; font-weight: bold;">🎓 Education</span>
+    const lines = [
+      `<span style="color: #ff8c00; font-weight: bold;">Education</span>`,
+      "",
+    ];
 
-${this.wrapWithColor(
-  "┌──────────────────────────────────────────────────┐",
-  "#ff8c00"
-)}
-${this.wrapWithColor("│", "#ff8c00")}${this.wrapWithColor(
-      " Bachelor of Computer Science ",
-      "#ffffff"
-    )}${this.wrapWithColor("│", "#ff8c00")}
-${this.wrapWithColor(
-  "└──────────────────────────────────────────────────┘",
-  "#ff8c00"
-)}
-
-${this.wrapWithColor("🏛️ Institution:", "#ff8c00")} ${this.wrapWithColor(
-      "University of Tirana",
-      "#ffffff"
-    )}
-${this.wrapWithColor("📅 Duration:", "#ff8c00")}    ${this.wrapWithColor(
-      "2013 - 2016",
-      "#ffffff"
-    )}
-${this.wrapWithColor("📍 Location:", "#ff8c00")}    ${this.wrapWithColor(
-      "Tirana, Albania",
-      "#ffffff"
-    )}
-
-${this.wrapWithColor(
-  "╭──────────────────────────────────────────────────╮",
-  "#ff8c00"
-)}
-${this.wrapWithColor("│", "#ff8c00")}${this.wrapWithColor(
-      " Foundation of my software engineering journey ",
-      "#ffffff"
-    )}${this.wrapWithColor("│", "#ff8c00")}
-${this.wrapWithColor(
-  "╰──────────────────────────────────────────────────╯",
-  "#ff8c00"
-)}`;
+    (educationContent.institutions || []).forEach((item, index) => {
+      lines.push(this.wrapWithColor(`${String(index + 1).padStart(2, "0")}. ${item.name}`, "#00ffff"));
+      lines.push(this.wrapWithColor(`   ${item.degree}`, "#ffffff"));
+      lines.push(this.wrapWithColor(`   ${item.duration} | ${item.location}`, "#87cefa"));
+      lines.push(this.wrapWithColor(`   Score: ${item.percentage}`, "#98fb98"));
+      lines.push("");
+    });
 
     const educationDiv = document.createElement("div");
-    educationDiv.innerHTML = education;
+    educationDiv.innerHTML = lines.join("\n");
     outputElement.appendChild(educationDiv);
     this.scrollToBottom(outputElement.closest(".terminal-content"));
   }
@@ -1642,6 +1615,7 @@ ${this.wrapWithColor(
 new TerminalResume();
 
 export {};
+
 
 
 

@@ -299,3 +299,54 @@ export const reportEntries = [
     content: "Built a low-latency AI Voice Agent for virtual meetings, delivering natural interactions and optimized real-time communication performance."
   }
 ]
+
+
+export const educationContent = {
+    title: "Education",
+    institutions: [
+        {
+            name: "Indian Institute of Information Technology, Una",
+            degree: "B.Tech in Electronics and Communication Engineering",
+            duration: "2022 - 2026",
+            location: "Una, Himachal Pradesh",
+            percentage: "8.90/10"
+        },
+        {
+            name: "Delhi Public School, Ranchi",
+            degree: "Intermediate (Class 12)",
+            duration: "2019 - 2021",
+            location: "Ranchi, Jharkhand",
+            percentage: "96.2%"
+        },
+        {
+            name: "Oxford Public School, Ranchi",
+            degree: "High School (Class 10)",
+            duration: "2017 - 2019",
+            location: "Ranchi, Jharkhand",
+            percentage: "97.2%"
+        }
+    ]
+}
+
+
+export const achievementContent = {
+    title: "Achievements",
+    achievements: [
+        {
+            title: "Knight on LeetCode",
+            description: "Achieved 'Knight' status on LeetCode by solving 600+ problems, ranking in the top 7.9% of competitive programmers globally."
+        },
+        {
+            title: "1st Position at Coders' FaceOff",
+            description: "Awarded 1st Position at Coders' FaceOff (IIIT Una, 2024), demonstrating proficiency in advanced data structures and algorithms."
+        },
+        {
+            title: "3rd Position at Electrothon",
+            description: "Secured 3rd Position at Electrothon (NIT Hamirpur, 2024), developing a high-impact solution within a 48-hour sprint."
+        },
+        {
+            title: "Hackathon Finalist",
+            description: "Selected as a finalist and participant in premier hackathons including HackTU 5.0 (Thapar) and HackTheHills (IIIT Una)."
+        }
+    ]
+}

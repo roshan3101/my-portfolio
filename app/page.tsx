@@ -8,6 +8,7 @@ import Skills from "./components/home/skills";
 import Journey from "./components/home/journey";
 import CodingStats from "./components/home/coding-stats";
 import Projects from "./components/home/projects";
+import EducationAchievements from "./components/home/education-achievements";
 import Reports from "./components/home/reports";
 import Contact from "./components/home/contact";
 import Footer from "./components/home/footer";
@@ -64,9 +65,10 @@ export default async function Home() {
       <Journey />
       <CodingStats />
       <Projects />
+      <EducationAchievements />
       <Reports />
       <Contact />
-      <Footer />z
+      <Footer />
       <HomeEffects />
     </main>
   );

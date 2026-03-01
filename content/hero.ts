@@ -1,2 +1,1 @@
-export { heroContent } from "./home-sections/home";
-
+export { heroContent, educationContent, achievementContent } from "./home-sections/home";
