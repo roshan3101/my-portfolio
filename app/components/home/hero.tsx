@@ -42,9 +42,9 @@ export default function Hero() {
                     className="bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
                     VIEW DATABASE
                 </a>
-                <a href="Assets/Resume/ROSHAN_KUMAR_SAHU_2026.pdf" download
+                <a href="/resume"
                     className="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
-                    <i className="ri-download-line"></i> DOWNLOAD CV
+                    <i className="ri-file-list-3-line"></i> OPEN CV
                 </a>
             </div>
         </div>
@@ -61,4 +61,3 @@ export default function Hero() {
     </>
   );
 }
-

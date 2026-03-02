@@ -9,7 +9,7 @@ export const heroContent = {
 export const aboutContent = {
     title: "Who am I?",
     description: "I am a software engineer driven by the challenge of bridging the gap between cutting-edge AI research and scalable production environments. Whether it is fine-tuning LLMs for domain-specific tasks or architecting real-time collaboration platforms, I focus on building systems that are as technically robust as they are user-centric.",
-    highlights: ["AI research", "real-time collaboration", "software engineer", "AI development", "full-stack mastery", "algorithmic excellence", "RAG", "LLMs", "robust architectures", "Knight on LeetCode", "Coders' FaceOff"],
+    highlights: ["AI research", "real-time collaboration", "software engineer", "AI development", "full-stack mastery", "algorithmic excellence", "RAG", "LLMs", "robust architectures", "Knight on LeetCode", "Coders' FaceOff."],
     location: "Jharkhand, India",
     status: "Available for work",
     avatar_tag: "AVATAR.JPG",
