@@ -3,7 +3,7 @@ export async function initPeaceRuntime() {
   if (window.__peaceRuntimeInitialized) return;
   window.__peaceRuntimeInitialized = true;
 
-  const THREE = await import("https://cdn.skypack.dev/three@0.133.1/build/three.module");
+  const THREE = await import("three");
 window.addEventListener("DOMContentLoaded", () => {
   const canvasEl = document.querySelector("#canvas");
   const cleanBtn = document.querySelector(".clean-btn");

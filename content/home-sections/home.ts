@@ -172,7 +172,7 @@ export const projectContent = {
                 "Resolved write conflicts in multi-user environments by implementing Optimistic Locking, ensuring data integrity without compromising throughput.",
                 "Achieved end-to-end type safety by synchronizing Zod and Pydantic schemas, accelerating developer velocity by ~40%."
             ],
-            imageUrl: "/assets/projects/collatask.png",
+            imageUrl: "/Assets/projects/collatask.png",
             codeLink: "https://github.com/roshan3101/CollabTask",
             liveLink: "https://collab-task-woad.vercel.app",
 
@@ -186,7 +186,7 @@ export const projectContent = {
                 "Designed a consumption-based credit system to track resource usage and prevent API abuse.",
                 "Secured sensitive user credentials using AES-256 encryption at rest for safe injection into automation workflows."
             ],
-            imageUrl: "/assets/projects/intelliscrape.png",
+            imageUrl: "/Assets/projects/intelliscrape.png",
             codeLink: "https://github.com/roshan3101/IntelliScrape",
             liveLink: "https://intelliscrape.vercel.app/"
         },
@@ -199,7 +199,7 @@ export const projectContent = {
                 "Integrated Razorpay with server-side validation for atomic transactions and order history management.",
                 "Optimized frontend performance by ~35% using Redux Toolkit for global state caching and Vite for optimized bundling."
             ],
-            imageUrl: "/assets/projects/slimnastics.png",
+            imageUrl: "/Assets/projects/slimnastics.png",
             codeLink: "https://github.com/roshan3101/Slimnastics",
             liveLink: "https://slimnastics.vercel.app/"
         },
@@ -212,7 +212,7 @@ export const projectContent = {
             "Optimized inference for edge devices by quantizing models to INT4 GGUF format, enabling real-time CPU execution with <1GB RAM.",
             "Built an OpenAI-compatible API layer to serve local models as drop-in replacements for cloud-based LLMs."
             ],
-            imageUrl: "/assets/projects/finetuning.png",
+            imageUrl: "/Assets/projects/finetuning.png",
             codeLink: "https://github.com/roshan3101/llama-finetuning",
             liveLink: "N/A",
         },
@@ -225,7 +225,7 @@ export const projectContent = {
                 "Implemented real-time token streaming via Server-Sent Events (SSE), reducing perceived latency (TTFB) by ~60%.",
                 "Engineered an ingestion pipeline with semantic chunking to optimize retrieval accuracy across diverse document types."
             ],
-            imageUrl: "/assets/projects/rag-chatbot.png",
+            imageUrl: "/Assets/projects/rag-chatbot.png",
             codeLink: "https://github.com/roshan3101/rag-chatbot",
             liveLink: "https://rag-chatbot-liard-kappa.vercel.app/chat"
         },
@@ -238,7 +238,7 @@ export const projectContent = {
                 "Designed an interactive configuration GUI to dynamically define Regions of Interest (ROI) for rapid site deployment.",
                 "Optimized inference loops to process live video frames efficiently, rendering real-time status overlays for client dashboards."
             ],
-            imageUrl: "/assets/projects/parking-slot.png",
+            imageUrl: "/Assets/projects/parking-slot.png",
             codeLink: "https://github.com/roshan3101/Parking_slot",
             liveLink: "N/A"
         },
@@ -253,7 +253,7 @@ export const projectContent = {
                 "Optimized system security and reliability by implementing API rate limiting, server-side input validation, and graceful error boundaries.",
                 "Deployed a scalable distributed system using Vercel for the frontend and Google Cloud Run for the containerized backend."
             ],
-            imageUrl: "/assets/projects/translingo.png",
+            imageUrl: "/Assets/projects/translingo.png",
             codeLink: "https://github.com/roshan3101/Translingo",
             liveLink: "https://translingo-mu.vercel.app/"
         }
