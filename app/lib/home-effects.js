@@ -2,6 +2,23 @@ export function initHomeEffects() {
   if (typeof window === "undefined") return;
   if (window.__homeEffectsInitialized) return;
   window.__homeEffectsInitialized = true;
+    const BOOT_SESSION_KEY = "homeBootLoaderSeen";
+
+    const hasSeenBootLoader = () => {
+        try {
+            return window.sessionStorage.getItem(BOOT_SESSION_KEY) === "1";
+        } catch {
+            return false;
+        }
+    };
+
+    const markBootLoaderSeen = () => {
+        try {
+            window.sessionStorage.setItem(BOOT_SESSION_KEY, "1");
+        } catch {
+            // Ignore environments where sessionStorage is unavailable.
+        }
+    };
 // Always start from hero on refresh/navigation restore
         if ("scrollRestoration" in history) {
             history.scrollRestoration = "manual";
@@ -18,9 +35,14 @@ export function initHomeEffects() {
         const bootProgressText = document.getElementById('boot-progress-text');
         const bootStartTime = Date.now();
         const bootMinDuration = 2000;
+        const shouldShowBootLoader = !hasSeenBootLoader();
         let bootDone = false;
         let pageLoaded = document.readyState === 'complete';
         if (bootLoader && bootLog && bootProgressFill && bootProgressText) {document.body.style.overflow = 'hidden';
+            if (!shouldShowBootLoader) {
+                bootLoader.classList.add('boot-hidden');
+                document.body.style.overflow = '';
+            } else {
             const bootSteps = [
                 'resolving package graph...',
                 'fetching core-runtime@1.8.3',
@@ -83,6 +105,7 @@ export function initHomeEffects() {
                 appendLine('linking modules ... done');
                 appendLine('launching portfolio shell ... ready');
                 renderProgress(100);
+                markBootLoaderSeen();
 
                 setTimeout(() => {
                     bootLoader.classList.add('boot-hidden');
@@ -122,6 +145,7 @@ export function initHomeEffects() {
                 stepIndex = Math.max(stepIndex, minLinesBeforeHide);
                 maybeFinishBoot();
             }, 12000);
+            }
         }        
 
 // Custom Cursor Logic (3d-portfolio style hover morph)
