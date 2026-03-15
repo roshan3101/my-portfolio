@@ -4,7 +4,8 @@ export async function initPeaceRuntime() {
   window.__peaceRuntimeInitialized = true;
 
   const THREE = await import("three");
-window.addEventListener("DOMContentLoaded", () => {
+
+  const start = () => {
   const canvasEl = document.querySelector("#canvas");
   const cleanBtn = document.querySelector(".clean-btn");
   const hintEl = document.querySelector("#peace-suggestion");
@@ -140,6 +141,12 @@ window.addEventListener("DOMContentLoaded", () => {
       }, 350);
     });
   }
-});
+  };
+
+  if (document.readyState === "loading") {
+    window.addEventListener("DOMContentLoaded", start, { once: true });
+  } else {
+    start();
+  }
 
 }
