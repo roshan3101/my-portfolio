@@ -44,22 +44,24 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 max-w-5xl mx-auto">
-      <div className="bg-white border-4 border-black shadow-hard-xl p-8 md:p-12 relative reveal mt-12">
+    <section
+      id="contact"
+      className="py-16 sm:py-20 lg:py-24 px-4 max-w-5xl mx-auto">
+      <div className="bg-white border-4 border-black shadow-hard-xl p-6 sm:p-8 md:p-12 relative reveal mt-10 sm:mt-12">
         <div className="absolute -top-10 -left-6 bg-neo-yellow border-4 border-black px-6 py-2 shadow-hard rotate-[-5deg]">
           <span className="font-black text-2xl">START A PROJECT</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
           <div>
-            <h2 className="text-6xl font-black uppercase mb-6 leading-[0.85]">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black uppercase mb-4 sm:mb-6 leading-[0.9]">
               Let&apos;s
               <br />
               Talk
               <br />
               Code.
             </h2>
-            <p className="font-mono text-lg mb-8 text-gray-600">
+            <p className="font-mono text-base sm:text-lg mb-6 sm:mb-8 text-gray-600">
               {contactContent.description}
             </p>
             <div className="space-y-4">

@@ -3,8 +3,8 @@ import { contactContent } from "@/content/home-sections/home";
 export default function Footer() {
   return (
     <>
-<footer className="bg-black text-white py-16 px-4 border-t-8 border-neo-green font-mono relative overflow-hidden">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+<footer className="bg-black text-white py-10 sm:py-14 lg:py-16 px-4 border-t-8 border-neo-green font-mono relative overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 relative z-10">
             <div className="col-span-1 md:col-span-2">
                 <h2 className="text-4xl font-black mb-6">Roshan.</h2>
                 <p className="text-gray-400 max-w-sm">
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
         </div>
 
-        <div className="text-center mt-16 pt-8 border-t border-gray-800 text-gray-500 text-sm">
+        <div className="text-center mt-10 sm:mt-14 lg:mt-16 pt-6 sm:pt-8 border-t border-gray-800 text-gray-500 text-xs sm:text-sm">
             <p>© 2026 Roshan.exe // SYSTEM_END</p>
         </div>
 

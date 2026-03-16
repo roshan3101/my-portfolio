@@ -41,8 +41,9 @@ export default function About() {
 
   return (
     <>
-<section id="about"
-        className="py-24 px-4 max-w-7xl mx-auto border-x-4 border-black bg-white my-12 shadow-hard-lg relative overflow-hidden">
+<section
+        id="about"
+        className="py-16 sm:py-20 lg:py-24 px-4 max-w-7xl mx-auto border-x-4 border-black bg-white my-10 sm:my-12 shadow-hard-lg relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
             <div className="md:col-span-4 reveal">
                 <div className="aspect-square bg-gray-200 border-4 border-black relative shadow-hard group">
@@ -62,25 +63,30 @@ export default function About() {
                 </div>
             </div>
             <div className="md:col-span-8 flex flex-col justify-center reveal">
-                <h2 className="text-6xl font-black uppercase mb-6">{aboutContent.title}</h2>
-                <p className="font-mono text-xl leading-relaxed mb-6 about-text">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase mb-4 sm:mb-6">
+                    {aboutContent.title}
+                </h2>
+                <p className="font-mono text-base sm:text-lg md:text-xl leading-relaxed mb-4 sm:mb-6 about-text">
                     {renderHighlightedText(aboutContent.description)}
                 </p>
-                <div className="font-mono text-lg mb-8 text-gray-600 border-l-4 border-neo-purple pl-4 about-text">
+                <div className="font-mono text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-gray-600 border-l-4 border-neo-purple pl-3 sm:pl-4 about-text">
                 {
                     aboutContent.whatIBring.map((item, index) => (
-                        <p key={index} className="font-mono text-lg mb-4 text-gray-600 about-text">
+                        <p
+                            key={index}
+                            className="font-mono text-sm sm:text-base md:text-lg mb-3 sm:mb-4 text-gray-600 about-text"
+                        >
                             &lt;/&gt; <span className="text-neo-purple font-bold">{item.heading}</span>: {renderHighlightedText(item.description)}
                         </p>
                     ))
                 }
                 </div>
 
-                <div className="flex gap-4">
-                    <div className="flex gap-2 justify-center bg-neo-black text-white px-4 py-2 font-mono text-sm border-2 border-transparent">
+                <div className="flex flex-wrap gap-3 sm:gap-4">
+                    <div className="flex items-center gap-2 justify-center bg-neo-black text-white px-3 sm:px-4 py-2 font-mono text-xs sm:text-sm border-2 border-transparent">
                         <LocateFixed /> {aboutContent.location}
                     </div>
-                    <div className="flex gap-2 justify-center bg-neo-green text-black px-4 py-2 font-mono text-sm border-2 border-black">
+                    <div className="flex items-center gap-2 justify-center bg-neo-green text-black px-3 sm:px-4 py-2 font-mono text-xs sm:text-sm border-2 border-black">
                         <BadgeInfo />  {aboutContent.status}
                     </div>
                 </div>
