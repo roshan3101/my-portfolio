@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
+import VapiVoiceAgent from "./components/VapiVoiceAgent";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://roshan-kumar-sahu.vercel.app"),
@@ -88,6 +89,7 @@ export default function RootLayout({
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
           })(window, document, 'script', 'dataLayer', 'GTM-TLNG322R');`}
         </Script>
+        <VapiVoiceAgent />
         {children}
       </body>
     </html>
